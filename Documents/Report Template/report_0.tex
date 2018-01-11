@@ -1,0 +1,80 @@
+\documentclass[]{monthly-report}
+ \def\modulename{ME Project} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%% BEGINNING %%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%
+%%% Input your name, student number, 
+%%% project and report details
+
+\def\studentname{David Hayes}
+\def\projecttitle{Learning Signal Feature Representation using Generative Adversarial Networks}
+\def\ucdstudentnumber{\hl{student number}}
+\def\monthlyreportnumber{\hl{0}}
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%
+%%% First Section
+
+This short report also serves as a template for preparing your reports using \LaTeX.  
+
+\section{Work Plan}
+
+You should devote some time during the first few weeks of term to prepare a detailed work plan for the duration of your project. This should be reviewed regularly as the project develops. Try to put as much thought as possible into this plan as it will help you keeping track of progress and ensure that you meet deadlines. Break down your project into basic tasks/work packages and try to evaluate the amount of work required for each item. You should regularly check progress against this work plan and discuss it from time to time at our meetings.
+
+\section{Git \& Backups}
+
+Set up a git repository for your project on \url{http://git.ucd.ie} or  \url{http://github.com} and share it with us. Ensure we have sufficient rights to pull your repository (reporter rights should be sufficient). This repository should be logically organised with sub-directories for your log-book, reports, bibliography, code, documentation etc... Ensure your commit and push on a daily basis. All project materials should be contained on this repository. Our school will provide regular backups and ensure no data is lost.
+
+\section{First Steps}
+
+\begin{itemize}
+
+\item State-of-art research. This should be as thorough as possible. Use Google Scholar for existing and related works, also search for academic papers e.g.~\cite{goodfellow_GAN_2014, donahue2016bigan, GAN_refs_2016}. Very importantly, keep an annotated bibliography of your readings (use \BibTeX\ file for all bibliographic entries~\cite{BibTeX}). Share your findings at our  meetings. At the end of this research, you ought to be an expert in ConvNets and GANs!
+
+\item Learn about deep learning. We recommend to follow some online modules e.g.~\cite{Ng-Coursera-2016, VincentVanhoucke-Udacity-2016, Nvidia-DL-Course-2016}.
+
+\item Learn how to use \LaTeX e.g. \url{https://www.latex-project.org/} and use \url{http://overleaf.com} for you \LaTeX documents. If you like, you can also install the \LaTeX tools on your laptop, e.g TeXShop and MacTeX on MacOS.
+
+\item Install some deep learning frameworks suitable for your project, probably Keras with Tensorflow back-end but maybe also Theano, Torch or Caffe \ldots. Also install some python IDE (e.g. PyCharm).
+
+\item Identify a number of datasets that can be used for the testing and evaluation of your GAN algorithms, e.g MNIST dataset~\cite{NMIST-dataset}.
+
+\item Implement and reproduce results of DCGAN~\cite{DCGAN2015} on a dataset of your choice. Use Keras and compare training results using Tensorflow and Theano back-end. Report on performance, training time\ldots. Experiment GPU acceleration.
+
+\item Think about how to use GANs with non-bitmap datasets e.g. our 1D online gesture dataset.
+
+\item Think of interesting applications for feature learning representations using GANs and look into requirements in terms of training models, datasets\ldots
+
+\end{itemize}
+
+\section{Your Project Description}
+
+\subsection{Background}
+
+Recently, a new class of machine learning algorithms called Generative Adversarial Networks (GANs) were introduced to achieve unsupervised learning. It consists of two neural networks competing in a two-player minimax game framework. In this context, a generative model is trained to capture a desired data distribution while a discriminative model estimates the probability that a sample came from the training data rather than the generative model. In essence, this novel framework proposes to learn semantic latent representations given a large dataset. These algorithms have been successful applied to many interesting domain such as the generation of realistic images, the upsampling of super-resolution signals or text to image synthesis, with several open source implementation available on frameworks such Tensorflow, Torch, Theano, Caffe or Keras.
+
+The project proposes to study the application of GANs to signal feature learning using a recently proposed bi-directional framework where the inverse mapping of data to the latent representation (features) is also learned by training an additional neural network. This will first involve the model implementation (python and tensorflow) and the training on the NMIST digit classification dataset.  The approach will then be adapted to a different domain e.g. face detection, audio fingerprinting requiring the preparation of a suitable dataset for training and possible changes to the models. The project will develop problem solving and programming skills.
+
+
+%%%%%%%%%%%%%%%%%%%%%%
+%%% Bibliography
+
+\begingroup
+\raggedright
+\bibliography{report-biblio}{}
+\endgroup
+\bibliographystyle{IEEEtran}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%% END %%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\label{last_page}
+
+ \end{document} 
