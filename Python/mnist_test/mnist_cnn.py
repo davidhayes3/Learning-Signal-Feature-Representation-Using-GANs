@@ -12,23 +12,37 @@ from keras.layers import Dense, Dropout, Flatten
 from keras.layers import Conv2D, MaxPooling2D
 from keras import backend as K
 import matplotlib.pyplot as plt
+from keras_autoencoder.keras_conv_ae_models import encoder_model
+from keras.callbacks import EarlyStopping
 
 batch_size = 128
 num_classes = 10
-epochs = 12
-rgb_dim = 3
+epochs = 100
+rgb_dim = 1
+
+callbacks = [EarlyStopping(monitor='val_loss', min_delta=0, patience=5, verbose=0)]
 
 # input image dimensions
 img_rows, img_cols = 28, 28
 
 # the data, shuffled and split between train and test sets
 #(x_train, y_train), (x_test, y_test) = mnist.load_data()
-(x_train, y_train), (x_test, y_test) = cifar10.load_data()
+(x_train, y_train), (x_test, y_test) = mnist.load_data()
 
 print('x_train shape:', x_train.shape)
 
 plt.imshow(x_train[5])
 plt.show()
+
+def cnn(e):
+    model = Sequential()
+    model.add(e)
+    model.add(Flatten())
+    model.add(Dense(128, activation='relu'))
+    model.add(Dropout(0.5))
+    model.add(Dense(10, activation='softmax'))
+    return model
+
 
 # input image dimensions
 img_rows, img_cols = x_train.shape[1], x_train.shape[2]
@@ -67,9 +81,13 @@ model.add(Flatten())
 print(model.count_params())
 print(model.output_shape)
 model.add(Dense(128, activation='relu'))
-#model.add(Dropout(0.5))
-#model.add(Dense(num_classes, activation='softmax'))
+model.add(Dropout(0.5))
+model.add(Dense(num_classes, activation='softmax'))
 print(model.count_params())
+
+e = encoder_model()
+e.load_weights('encoder.h5')
+model = cnn(e)
 
 model.compile(loss=keras.losses.categorical_crossentropy,
               optimizer=keras.optimizers.Adadelta(),
@@ -79,7 +97,9 @@ model.fit(x_train, y_train,
           batch_size=batch_size,
           epochs=epochs,
           verbose=1,
+          callbacks=callbacks,
           validation_split=1/12.)
+
 score = model.evaluate(x_test, y_test, verbose=0)
 print('Test loss:', score[0])
 print('Test accuracy:', score[1])

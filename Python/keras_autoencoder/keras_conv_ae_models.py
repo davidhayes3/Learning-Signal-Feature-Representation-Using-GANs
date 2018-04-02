@@ -1,4 +1,4 @@
-from keras.layers import Conv2D, MaxPooling2D, UpSampling2D
+from keras.layers import Conv2D, MaxPooling2D, UpSampling2D, Flatten, Reshape
 from keras.models import Sequential
 
 # Define models
@@ -13,11 +13,13 @@ def encoder_model():
     model.add(MaxPooling2D((2, 2), padding='same'))
     model.add(Conv2D(8, (3, 3), activation='relu', padding='same'))
     model.add(MaxPooling2D((2, 2), padding='same'))
+    model.add(Flatten())
     return model
 
 def decoder_model():
     model = Sequential()
-    model.add(Conv2D(8, (3, 3), activation='relu', padding='same', input_shape=(4,4,8)))
+    model.add(Reshape((4,4,8), input_shape=(128,)))
+    model.add(Conv2D(8, (3, 3), activation='relu', padding='same'))#, input_shape=(4,4,8)))
     model.add(UpSampling2D((2, 2)))
     model.add(Conv2D(8, (3, 3), activation='relu', padding='same'))
     model.add(UpSampling2D((2, 2)))

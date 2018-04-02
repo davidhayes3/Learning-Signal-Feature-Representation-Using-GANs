@@ -2,13 +2,12 @@ import numpy as np
 from keras_conv_ae_models import encoder_model, decoder_model, autoencoder_model
 from keras.datasets import mnist
 import matplotlib.pyplot as plt
+from keras.callbacks import EarlyStopping, TensorBoard
 
 # Create models for encoder, decoder and combined autoencoder
 e = encoder_model()
 d = decoder_model()
 autoencoder = autoencoder_model(e, d)
-
-
 
 # Load and format data
 
@@ -21,23 +20,25 @@ x_test = np.reshape(x_test, (len(x_test), 28, 28, 1))  # adapt this if using `ch
 
 # Train model
 
-autoencoder.compile(optimizer='adadelta', loss='binary_crossentropy')
-
-from keras.callbacks import TensorBoard
+callbacks = [EarlyStopping(monitor='val_loss', min_delta=0, patience=5, verbose=0),
+             TensorBoard(log_dir='/tmp/autoencoder')]
 #tensorboard --logdir=/tmp/autoencoder
 
+autoencoder.compile(optimizer='adadelta', loss='binary_crossentropy')
+
 autoencoder.fit(x_train, x_train,
-                epochs=50,
+                epochs=100,
                 batch_size=128,
                 shuffle=True,
-                validation_data=(x_test, x_test)#,
-                #callbacks=[TensorBoard(log_dir='/tmp/autoencoder')]
+                validation_data=(x_test, x_test),
+                verbose=1,
+                callbacks=callbacks
                 )
 
 # Save learned models
-e.save_weights('encoder.h5', True)
-d.save_weights('decoder.h5', True)
-autoencoder.save_weights('autoencoder.h5', True)
+e.save_weights('mnist_encoder.h5', True)
+d.save_weights('mnist_decoder.h5', True)
+autoencoder.save_weights('mnist_autoencoder.h5', True)
 
 # Apply autoencoder to test images
 recon_imgs = autoencoder.predict(x_test)

@@ -1,0 +1,795 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/toy_dataset/toy_vae_train.py" description="encoder = encoder_model()" line="82" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="60c99bb8-7aa2-4dcc-b082-84b52d6a9a3e" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Dataset/toy_dataset_x_test.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Dataset/toy_dataset_x_train.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Dataset/toy_dataset_y_test.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Dataset/toy_dataset_y_train.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_basic_ae_latent.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_10.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_11.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_12.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_13.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_14.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_15.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_16.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_17.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_18.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_19.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_2.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_20.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_21.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_22.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_23.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_3.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_4.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_5.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_6.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_7.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_8.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_9.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_10.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_11.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_12.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_13.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_14.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_15.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_16.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_17.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_18.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_19.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_2.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_20.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_21.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_22.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_23.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_3.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_4.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_5.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_6.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_7.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_8.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_9.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Images/toydset_vae_latent.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Models/bigan_encoder.h5" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Models/bigan_generator.h5" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Models/encoder.h5" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Models/toydset_basic_ae_encoder.h5" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/Models/toydset_vae_encoder.h5" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/foo.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/generate_dataset.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/generate_dataset_16.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/mnist_bigan_valloss_10_epochs_200_bs.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/mnist_bigan_valloss_10_epochs_50_bs.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/mnist_bigan_valloss_20_epochs_50_bs.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/test.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/toy_bigan_train.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/toy_simple_ae_train.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/toy_vae_train.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/toydset_bigan_latent_16.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/toydset_bigan_latent_19.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/toydset_models.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/toy_dataset/toydset_visualize_latent_space.py" />
+      <change beforePath="$PROJECT_DIR$/keras_autoencoder/autoencoder.h5" afterPath="$PROJECT_DIR$/keras_autoencoder/autoencoder.h5" />
+      <change beforePath="$PROJECT_DIR$/keras_autoencoder/decoder.h5" afterPath="$PROJECT_DIR$/keras_autoencoder/decoder.h5" />
+      <change beforePath="$PROJECT_DIR$/keras_autoencoder/encoder.h5" afterPath="$PROJECT_DIR$/keras_autoencoder/encoder.h5" />
+      <change beforePath="$PROJECT_DIR$/keras_autoencoder/keras_conv_ae_models.py" afterPath="$PROJECT_DIR$/keras_autoencoder/keras_conv_ae_models.py" />
+      <change beforePath="$PROJECT_DIR$/keras_autoencoder/keras_conv_ae_train.py" afterPath="$PROJECT_DIR$/keras_autoencoder/keras_conv_ae_train.py" />
+      <change beforePath="$PROJECT_DIR$/mnist_test/generator.mlmodel" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/mnist_test/generator0.h5" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/mnist_test/generator1.h5" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/mnist_test/generator2.h5" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/mnist_test/generator3.h5" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/mnist_test/generator4.h5" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/mnist_test/generator5.h5" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/mnist_test/generator6.h5" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/mnist_test/generator7.h5" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/mnist_test/generator8.h5" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/mnist_test/generator9.h5" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/mnist_test/mnist_cnn.py" afterPath="$PROJECT_DIR$/mnist_test/mnist_cnn.py" />
+      <change beforePath="$PROJECT_DIR$/mnist_test/mnist_gan.py" afterPath="$PROJECT_DIR$/mnist_test/mnist_gan.py" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="toydset_bigan_latent_13.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_13.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="toydset_bigan_latent_20.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_20.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="toydset_bigan_latent_21.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_21.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="toydset_bigan_latent_22.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_22.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="toydset_bigan_latent_23.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_23.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="generate_dataset.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/toy_dataset/generate_dataset.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="17" column="32" lean-forward="false" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="generate_dataset_16.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/toy_dataset/generate_dataset_16.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-153">
+              <caret line="13" column="21" lean-forward="false" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/toy_dataset/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="toydset_bigan_latent_18.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_18.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="toydset_bigan_latent_16.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_16.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>predictions</find>
+      <find>self.</find>
+      <find>GaussianNOise</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="C:/Python27/Lib/site-packages/keras/backend/__init__.py" />
+        <option value="$PROJECT_DIR$/mnist_test/mnist_cnn.py" />
+        <option value="$PROJECT_DIR$/keras_autoencoder/mnist_labelled_reduce.py" />
+        <option value="$PROJECT_DIR$/keras_autoencoder/mnist_guided_labelling.py" />
+        <option value="$PROJECT_DIR$/keras_adversarial_test/keras_adversarial/examples/example_gan_convolutional.py" />
+        <option value="$PROJECT_DIR$/bigan/mnist_bigan.py" />
+        <option value="$PROJECT_DIR$/keras_autoencoder/comparison_graph _file.py" />
+        <option value="$PROJECT_DIR$/bigan/mnist_dcgan.py" />
+        <option value="$PROJECT_DIR$/cifar10_bigan.py" />
+        <option value="$PROJECT_DIR$/keras_autoencoder/keras_conv_ae_visualize.py" />
+        <option value="$PROJECT_DIR$/keras_autoencoder/keras_conv_ae_train.py" />
+        <option value="$PROJECT_DIR$/keras_autoencoder/cifar10_conv_ae_models.py" />
+        <option value="$PROJECT_DIR$/keras_autoencoder/keras_conv_ae_models.py" />
+        <option value="$PROJECT_DIR$/keras_autoencoder/mnist_conv_ae_tsne.py" />
+        <option value="$PROJECT_DIR$/mnist_test/mnist_mlp_bigan.py" />
+        <option value="$PROJECT_DIR$/mnist_test/newest_test.py" />
+        <option value="$PROJECT_DIR$/mnist_test/mnist_gan.py" />
+        <option value="$PROJECT_DIR$/mnist_test/confpaper_mnist_comparison_models.py" />
+        <option value="$PROJECT_DIR$/mnist_test/confpaper_mnist_train_gan.py" />
+        <option value="$PROJECT_DIR$/mnist_test/confpaper_mnist_train_bigan.py" />
+        <option value="$PROJECT_DIR$/toy_dataset/__init__.py" />
+        <option value="$PROJECT_DIR$/toy_dataset/toydset_models.py" />
+        <option value="$PROJECT_DIR$/toy_dataset/toydset_visualize_latent_space.py" />
+        <option value="$PROJECT_DIR$/toy_dataset/generate_dataset.py" />
+        <option value="$PROJECT_DIR$/toy_dataset/toy_simple_ae_train.py" />
+        <option value="$PROJECT_DIR$/toy_dataset/toy_bigan_train.py" />
+        <option value="$PROJECT_DIR$/toy_dataset/toy_vae_train.py" />
+        <option value="$PROJECT_DIR$/toy_dataset/generate_dataset_16.py" />
+        <option value="$PROJECT_DIR$/toy_dataset/test.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="743" />
+    <option name="width" value="610" />
+    <option name="height" value="735" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python" type="462c0819:PsiDirectoryNode" />
+              <item name="toy_dataset" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python" type="462c0819:PsiDirectoryNode" />
+              <item name="toy_dataset" type="462c0819:PsiDirectoryNode" />
+              <item name="Images" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.test">
+    <configuration name="generate_dataset_16" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/toy_dataset" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Python" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/toy_dataset/generate_dataset_16.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/toy_dataset" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Python" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/toy_dataset/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="toy_bigan_train" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/toy_dataset" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Python" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/toy_dataset/toy_bigan_train.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="toy_simple_ae_train" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/toy_dataset" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Python" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/toy_dataset/toy_simple_ae_train.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="toy_vae_train" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/toy_dataset" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Python" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/toy_dataset/toy_vae_train.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Python.toy_bigan_train" />
+      <item index="1" class="java.lang.String" itemvalue="Python.toy_simple_ae_train" />
+      <item index="2" class="java.lang.String" itemvalue="Python.generate_dataset_16" />
+      <item index="3" class="java.lang.String" itemvalue="Python.toy_vae_train" />
+      <item index="4" class="java.lang.String" itemvalue="Python.test" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.test" />
+        <item index="1" class="java.lang.String" itemvalue="Python.toy_vae_train" />
+        <item index="2" class="java.lang.String" itemvalue="Python.toy_bigan_train" />
+        <item index="3" class="java.lang.String" itemvalue="Python.toy_simple_ae_train" />
+        <item index="4" class="java.lang.String" itemvalue="Python.generate_dataset_16" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="60c99bb8-7aa2-4dcc-b082-84b52d6a9a3e" name="Default" comment="" />
+      <created>1519948396918</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1519948396918</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32440946" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32440946" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/toy_dataset/toydset_bigan_9.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/toydset_bigan_6.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/toydset_bigan_7.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/toydset_bigan_8.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras_autoencoder/mnist_conv_ae_tsne.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1232">
+          <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mnist_test/newest_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <element signature="e#140#177#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_16.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mnist_test/mnist_gan_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4012">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#35#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bigan/mnist_bigan.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-433">
+          <caret line="164" column="4" lean-forward="false" selection-start-line="164" selection-start-column="4" selection-end-line="165" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_20.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_4.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/toydset_models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="18" column="47" lean-forward="false" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#42#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_3.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/toydset_visualize_latent_space.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="18" column="4" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#37#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_9.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mnist_test/mnist_gan.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-680">
+          <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_10.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_9.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/Images/toydset_basic_ae_latent.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/Dataset/toy_dataset_y_test.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-119">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_6.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_4.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_3.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/Dataset/toy_dataset_y_train.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-595">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_6.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_8.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/toy_bigan_train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="199" column="11" lean-forward="false" selection-start-line="199" selection-start-column="11" selection-end-line="199" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#18#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/toy_simple_ae_train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_7.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_5.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/toy_vae_train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1594">
+          <caret line="54" column="32" lean-forward="false" selection-start-line="54" selection-start-column="32" selection-end-line="54" selection-end-column="32" />
+          <folding>
+            <element signature="e#188#225#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_12.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_11.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_17.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_15.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_14.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_13.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/generate_dataset.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="17" column="32" lean-forward="false" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_18.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_16.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_19.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_20.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_21.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_22.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/Images/toydset_bigan_latent_23.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/generate_dataset_16.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153">
+          <caret line="13" column="21" lean-forward="false" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toy_dataset/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

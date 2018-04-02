@@ -12,7 +12,6 @@ import numpy as np
 from PIL import Image
 import argparse
 import math
-import coremltools
 import os
 import h5py
 
@@ -102,6 +101,8 @@ def train(batch_size, digit=None):
     # Create models for generator, discriminator and combined g and d
     d = discriminator_model()
     g = generator_model()
+    print(d.count_params())
+    print(g.count_params())
     d_on_g = generator_containing_discriminator(g, d)
 
     # Define optimizer for generator and discriminator
@@ -254,3 +255,8 @@ if __name__ == "__main__":
         generate(batch_size=args.batch_size, nice=args.nice)
     elif args.mode == "coreml":
         create_coreml(filepath=args.file_path)
+
+d = discriminator_model()
+g = generator_model()
+print(d.count_params())
+print(g.count_params())
