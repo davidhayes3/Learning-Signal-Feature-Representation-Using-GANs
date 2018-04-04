@@ -33,8 +33,7 @@ def save_latent_vis(encoder):
         ax.scatter(xx[y_train == i], yy[y_train == i], color=colors[i], label=labels[i], s=5)
 
     plt.axis('tight')
-    plt.savefig('Images/toydset_basic_ae_latent.png')
-
+    plt.savefig('Images/toydset_dae_latent.png')
 
 
 # Load dataset
@@ -43,7 +42,14 @@ x_test = np.loadtxt('Dataset/toy_dataset_x_test.txt', dtype=np.float32)
 y_train = np.loadtxt('Dataset/toy_dataset_y_train.txt', dtype=np.int)
 y_test = np.loadtxt('Dataset/toy_dataset_y_test.txt', dtype=np.int)
 
-#print(x_test[0:100])
+
+noise_factor = 0.5
+x_train_noisy = x_train + noise_factor * np.random.normal(0., 1, size=x_train.shape)
+x_test_noisy = x_test + noise_factor * np.random.normal(0., 1, size=x_test.shape)
+
+x_train_noisy = np.clip(x_train_noisy, 0., 1.)
+x_test_noisy = np.clip(x_test_noisy, 0., 1.)
+
 
 # Define models
 
@@ -52,7 +58,6 @@ def encoder_model():
 
     model.add(Dense(512, input_dim=img_dim))
     model.add(LeakyReLU(alpha=0.2))
-    #model.add(BatchNormalization(momentum=0.8))
     model.add(Dense(512))
     model.add(LeakyReLU(alpha=0.2))
     model.add(Dense(latent_dim))
@@ -65,7 +70,6 @@ def generator_model():
 
     model.add(Dense(512, input_dim=latent_dim))
     model.add(LeakyReLU(alpha=0.2))
-    #model.add(BatchNormalization(momentum=0.8))
     model.add(Dense(512))
     model.add(LeakyReLU(alpha=0.2))
     model.add(Dense(img_dim))
@@ -86,32 +90,28 @@ def autoencoder_model(e, d):
 # Create models for encoder, decoder and combined autoencoder
 encoder = encoder_model()
 generator = generator_model()
-autoencoder = autoencoder_model(encoder, generator)
-#print(encoder.count_params(), generator.count_params(), autoencoder.count_params())
+dae = autoencoder_model(encoder, generator)
 
 
 # Specify loss function and optimizer for autoencoder
-#autoencoder.compile(optimizer='adam', loss='mse',  metrics=['accuracy'])
-autoencoder.compile(optimizer='adadelta', loss='binary_crossentropy',  metrics=['accuracy'])
+dae.compile(optimizer='adadelta', loss='binary_crossentropy',  metrics=['accuracy'])
 
 callbacks = [EarlyStopping(monitor='val_loss', min_delta=0, patience=5, verbose=0, mode='auto')]
 
-history = autoencoder.fit(x_train, x_train,
+history = dae.fit(x_train_noisy, x_train,
                 epochs=100,
                 batch_size=100,
                 shuffle=True,
-                validation_data=(x_test, x_test),
+                validation_data=(x_test_noisy, x_test),
                 callbacks=callbacks,
-                verbose=1
-            )
+                verbose=1)
 
 
-
+# Save visualization of latent space
 save_latent_vis(encoder)
 
-
 # Save encoder and decoder models
-encoder.save_weights('Models/toydset_basic_ae_encoder.h5', True)
+encoder.save_weights('Models/toydset_dae_encoder.h5', True)
 
 
 ## Visualize Reconstruction
@@ -173,5 +173,3 @@ plt.ylabel('Loss')
 plt.xlabel('Epoch')
 plt.legend(['Train', 'Validation'], loc='upper right')
 plt.show()
-
-

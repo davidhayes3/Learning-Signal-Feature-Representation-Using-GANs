@@ -6,6 +6,7 @@ from keras.callbacks import EarlyStopping, TensorBoard, ModelCheckpoint
 from keras import backend as K
 from keras.models import Sequential, Model
 from keras.layers import Dense, Activation, Input, merge, LeakyReLU, Dropout, concatenate, BatchNormalization
+from keras.optimizers import Adam
 from matplotlib.pyplot import cm
 
 np.random.seed(1337) # for reproducibility
@@ -33,9 +34,13 @@ def save_latent_vis(encoder):
         ax.scatter(xx[y_train == i], yy[y_train == i], color=colors[i], label=labels[i], s=5)
 
     plt.axis('tight')
-    plt.savefig('Images/toydset_basic_ae_latent.png')
+    plt.savefig('Images/toydset_latent_regressor_latent.png')
 
 
+
+# Load dataset
+z_train = np.random.normal(size=(num_classes * 5000, latent_dim))
+z_test = np.random.normal(size=(num_classes * 500, latent_dim))
 
 # Load dataset
 x_train = np.loadtxt('Dataset/toy_dataset_x_train.txt', dtype=np.float32)
@@ -52,9 +57,10 @@ def encoder_model():
 
     model.add(Dense(512, input_dim=img_dim))
     model.add(LeakyReLU(alpha=0.2))
-    #model.add(BatchNormalization(momentum=0.8))
-    model.add(Dense(512))
+    model.add(BatchNormalization(momentum=0.8))
+    model.add(Dense(512, input_dim=img_dim))
     model.add(LeakyReLU(alpha=0.2))
+    model.add(BatchNormalization(momentum=0.8))
     model.add(Dense(latent_dim))
 
     return model
@@ -65,53 +71,57 @@ def generator_model():
 
     model.add(Dense(512, input_dim=latent_dim))
     model.add(LeakyReLU(alpha=0.2))
-    #model.add(BatchNormalization(momentum=0.8))
-    model.add(Dense(512))
+    model.add(BatchNormalization(momentum=0.8))
+    model.add(Dense(512, input_dim=img_dim))
     model.add(LeakyReLU(alpha=0.2))
+    model.add(BatchNormalization(momentum=0.8))
     model.add(Dense(img_dim))
-    model.add(Activation('sigmoid'))
+    model.add(Activation('tanh'))
 
     return model
 
 
-def autoencoder_model(e, d):
+def latent_reconstructor_model(d, e):
     model = Sequential()
 
-    model.add(e)
     model.add(d)
+    model.add(e)
 
     return model
+
+optimizer = Adam(0.0002, 0.5)
 
 
 # Create models for encoder, decoder and combined autoencoder
 encoder = encoder_model()
+
 generator = generator_model()
-autoencoder = autoencoder_model(encoder, generator)
-#print(encoder.count_params(), generator.count_params(), autoencoder.count_params())
+generator.load_weights('Models/gan_generator.h5')
+generator.trainable = False
+
+latent_regressor = latent_reconstructor_model(generator, encoder)
+
 
 
 # Specify loss function and optimizer for autoencoder
-#autoencoder.compile(optimizer='adam', loss='mse',  metrics=['accuracy'])
-autoencoder.compile(optimizer='adadelta', loss='binary_crossentropy',  metrics=['accuracy'])
+latent_regressor.compile(optimizer='SGD', loss='mse',  metrics=['accuracy'])
 
 callbacks = [EarlyStopping(monitor='val_loss', min_delta=0, patience=5, verbose=0, mode='auto')]
 
-history = autoencoder.fit(x_train, x_train,
+history = latent_regressor.fit(z_train, z_train,
                 epochs=100,
                 batch_size=100,
                 shuffle=True,
-                validation_data=(x_test, x_test),
+                validation_data=(z_test, z_test),
                 callbacks=callbacks,
                 verbose=1
             )
 
-
-
+# Save latent space visualization
 save_latent_vis(encoder)
 
-
 # Save encoder and decoder models
-encoder.save_weights('Models/toydset_basic_ae_encoder.h5', True)
+encoder.save_weights('Models/toydset_latent_regressor_encoder.h5', True)
 
 
 ## Visualize Reconstruction
@@ -173,5 +183,3 @@ plt.ylabel('Loss')
 plt.xlabel('Epoch')
 plt.legend(['Train', 'Validation'], loc='upper right')
 plt.show()
-
-

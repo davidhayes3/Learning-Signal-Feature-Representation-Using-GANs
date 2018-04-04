@@ -53,7 +53,7 @@ def save_imgs(gen_imgs, epoch):
     plt.close()
 
 
-## Define models
+# Define models
 
 def encoder_model():
     model = Sequential()
@@ -67,12 +67,7 @@ def encoder_model():
     model.add(BatchNormalization(momentum=0.8))
     model.add(Dense(latent_dim))
 
-    model.summary()
-
-    img = Input(shape=img_shape)
-    z = model(img)
-
-    return Model(img, z)
+    return model
 
 
 def generator_model():
@@ -84,17 +79,12 @@ def generator_model():
     model.add(Dense(512))
     model.add(LeakyReLU(alpha=0.2))
     model.add(BatchNormalization(momentum=0.8))
-
-
-    model.add(Dense(np.prod(img_shape), activation='tanh'))
+    model.add(Dense(np.prod(img_shape)))
+    model.add(Activation('tanh'))
     model.add(Reshape(img_shape))
 
-    model.summary()
+    return model
 
-    z = Input(shape=(latent_dim,))
-    gen_img = model(z)
-
-    return Model(z, gen_img)
 
 def discriminator_model():
 
@@ -114,6 +104,7 @@ def discriminator_model():
     validity = Dense(1, activation='sigmoid')(model)
 
     return Model([z, img], validity)
+
 
 # Specify optimizer for models
 optimizer = Adam(0.0002, 0.5)
@@ -159,7 +150,7 @@ bigan_generator.compile(loss=['binary_crossentropy', 'binary_crossentropy'],
 
 # Training hyperparameters
 epochs = 20
-batch_size = 128
+batch_size = 100
 epoch_save_interval = 10
 num_batches = int(X_train.shape[0] / batch_size)
 half_batch = int(batch_size / 2)
@@ -206,29 +197,6 @@ for epoch in range(epochs):
         d_loss_fake = discriminator.train_on_batch([z, imgs_], fake)
         d_loss = 0.5 * np.add(d_loss_real, d_loss_fake)
 
-
-        ## Train d on half batch
-
-        '''# Sample noise and generate img
-        z = np.random.normal(size=(half_batch, latent_dim))
-        imgs_ = generator.predict(z)
-
-        # Select a random half of image batch and encode
-                # Select a random half of image batch and encode
-        idx = np.random.randint(0, batch_size, half_batch)
-        d_imgs = imgs[idx]
-        z_ = encoder.predict(d_imgs)
-
-        # Create labels for discriminator inputs
-        valid = np.ones((half_batch, 1))
-        fake = np.zeros((half_batch, 1))
-
-        # Train the discriminator (img -> z is valid, z -> img is fake)
-        d_loss_real = discriminator.train_on_batch([z_, d_imgs], valid)
-        d_loss_fake = discriminator.train_on_batch([z, imgs_], fake)
-        d_loss = 0.5 * np.add(d_loss_real, d_loss_fake)'''
-
-
         ## Record discriminator batch loss details
         d_batch_loss_trajectory[epoch * num_batches + batch] = d_loss[0]
         d_epoch_loss_sum += d_loss[0]
@@ -256,41 +224,17 @@ for epoch in range(epochs):
             d_loss[0], 100 * d_loss[1], ge_loss[0]))
 
 
-    # Get epoch loss data
+        # Get epoch loss data
         d_epoch_loss_trajectory[epoch] = d_epoch_loss_sum / num_batches
         ge_epoch_loss_trajectory[epoch] = ge_epoch_loss_sum / num_batches
 
         # If at save interval, save generated image samples
         if epoch % epoch_save_interval == 0:
-            z = np.random.normal(size=(25, latent_dim))
-            gen_imgs = generator.predict(z)
-            save_imgs(gen_imgs, epoch)
+            #z = np.random.normal(size=(25, latent_dim))
+            #gen_imgs = generator.predict(z)
+            #save_imgs(gen_imgs, epoch)
+            encoder.save_weights('Models/mnist_bigan_encoder.h5')
 
 
-## Visualize Reconstruction
-
-# Get initial data examples to train on
-num_classes = 10
-classes = np.arange(num_classes)
-test_digit_indices = np.empty(0)
-
-# Modify training set to contain set number of labels for each class
-for class_index in range(num_classes):
-    # Generate training set with even class distribution over all labels
-    indices = [i for i, y in enumerate(y_test) if y == classes[class_index]]
-    indices = np.asarray(indices)
-    indices = indices[0:10]
-    test_digit_indices = np.concatenate((test_digit_indices, indices))
-
-test_digit_indices = test_digit_indices.astype(np.int)
-
-# Generate test and reconstucted digit arrays
-X_test = X_test[test_digit_indices]
-recon_test = generator.predict(encoder.predict(X_test))
-n = len(X_test)
-
-# Plot test digits
-for i in range(n):
-    ax = plt.subplot(2 * num_classes, n / num_classes, i + 1)
-    plt.imshow(X_test[i].reshape(28, 28))
-    plt.gray()
+# Save learned encoder
+encoder.save_weights('Models/mnist_bigan_encoder.h5')
