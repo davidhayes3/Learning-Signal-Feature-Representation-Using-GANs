@@ -1,37 +1,13 @@
-import os
-import sys
-import h5py
 import cv2
-import math
-import random, string
-
 import numpy as np
-from scipy.stats import norm
 from sklearn import manifold
 import matplotlib.pyplot as plt
 from matplotlib.offsetbox import OffsetImage, AnnotationBbox
-from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
-
 from keras_conv_ae_models import encoder_model
-from keras.layers import Conv2D, MaxPooling2D, UpSampling2D, Flatten, Dense, Input
-from keras.models import Sequential, Model
-from keras.layers.advanced_activations import ELU
+from keras.layers import Conv2D, MaxPooling2D, Flatten
+from keras.models import Sequential
 
 
-
-def encoder_model():
-    model = Sequential()
-    model.add(Conv2D(16, kernel_size=(3, 3),
-                     activation='relu',
-                     padding='same',
-                     input_shape=(28, 28, 1))) # if channels_first
-    model.add(MaxPooling2D(pool_size=(2, 2), padding='same'))
-    model.add(Conv2D(8, (3, 3), activation='relu', padding='same'))
-    model.add(MaxPooling2D((2, 2), padding='same'))
-    model.add(Conv2D(8, (3, 3), activation='relu', padding='same'))
-    model.add(MaxPooling2D((2, 2), padding='same'))
-    model.add(Flatten())
-    return model
 
 def loadDataset():
     from keras.datasets import mnist
@@ -50,7 +26,6 @@ def imscatter(x, y, ax, imageData, zoom):
         img = imageData[i] * 255.
         img = img.astype(np.uint8).reshape([imageSize, imageSize])
         img = cv2.cvtColor(img, cv2.COLOR_GRAY2RGB)
-        # Note: OpenCV uses BGR and plt uses RGB
         image = OffsetImage(img, zoom=zoom)
         ab = AnnotationBbox(image, (x0, y0), xycoords='data', frameon=False)
         images.append(ax.add_artist(ab))

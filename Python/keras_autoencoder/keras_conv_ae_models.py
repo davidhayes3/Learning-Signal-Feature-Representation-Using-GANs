@@ -19,7 +19,7 @@ def encoder_model():
 def decoder_model():
     model = Sequential()
     model.add(Reshape((4,4,8), input_shape=(128,)))
-    model.add(Conv2D(8, (3, 3), activation='relu', padding='same'))#, input_shape=(4,4,8)))
+    model.add(Conv2D(8, (3, 3), activation='relu', padding='same'))
     model.add(UpSampling2D((2, 2)))
     model.add(Conv2D(8, (3, 3), activation='relu', padding='same'))
     model.add(UpSampling2D((2, 2)))

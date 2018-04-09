@@ -1,5 +1,5 @@
 import numpy as np
-from keras_conv_ae_models import encoder_model, decoder_model, autoencoder_model
+from semi_supervised_comparison.keras_autoencoder.keras_conv_ae_models import encoder_model, decoder_model, autoencoder_model
 from keras.datasets import mnist
 import matplotlib.pyplot as plt
 from keras.callbacks import EarlyStopping, TensorBoard

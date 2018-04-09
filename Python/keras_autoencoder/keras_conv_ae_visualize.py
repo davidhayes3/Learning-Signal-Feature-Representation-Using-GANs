@@ -11,13 +11,12 @@ e.load_weights('encoder.h5')
 d = decoder_model()
 d.load_weights('decoder.h5')
 
+
 # Get weights from first layer of encoder
 weights0 = e.layers[0].get_weights()[0] # get weights
-#weights0 = e.layers[0].get_weights()[1] # get biases
 weights0 = np.array(weights0).transpose() # transpose into suitable shape for visualizing
 
 # Load and format data
-
 (x_train, _), (x_test, _) = mnist.load_data()
 
 x_train = x_train.astype('float32') / 255.
